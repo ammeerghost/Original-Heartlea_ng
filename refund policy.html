@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy</title>
+    <link rel="stylesheet" href="refund policy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Heartlea skincare </h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="welcomepage.html">Chat & Ask</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="Image">
+        <img src="herp.webp" alt="Snow" style="width:100%;">
+
+        
+    </div>
+
+
+
+    <div class="Policy">
+        <h2>HEARTLEA_NG REFUND POLICY</h2>
+        <p>At Heartlea_ng, we believe that skincare is a personal journey, and we want you to feel confident in every purchase you make with us.
+             If for any reason you are not completely satisfied with your order, we offer a full refund within 30 days of purchase. We understand that different skin types react differently to products,
+              and sometimes a product may not meet your expectations. That’s why we strive to provide a seamless and transparent refund process. Our goal is to ensure that you can shop with peace of mind, 
+              knowing that your satisfaction is our priority. To be eligible for a refund, the product must be unused, in its original packaging, and accompanied by proof of purchase. This helps us maintain the highest standards of hygiene and quality for all our customers.</p>
+
+
+
+
+               <p>Initiating a refund is simple. If you wish to return a product,
+                 please contact our customer service team with your order details, and we will guide you through the process. Once your return is approved, we will provide you with instructions on where and how to send the item back.
+                  Refunds will be processed to the original payment method, and while we aim to complete the process as quickly as possible, it may take a few business days for the refunded amount to reflect in your account. Please note that shipping fees are non-refundable,
+                   and in most cases, return shipping costs will be the customer’s responsibility unless the return is due to a damaged, defective, or incorrect item received. We recommend using a trackable shipping method when sending back your item to ensure a smooth return process.</p>
+
+
+
+                  <p>At Heartlea_ng, we are dedicated to providing high-quality skincare solutions that you can trust. 
+                    Your feedback is incredibly important to us, as it helps us continue to improve our products and services. 
+                    If you experience any concerns with a product, we encourage you to reach out to us before requesting a refund.
+                     Our team is happy to assist you in finding a solution, whether it’s offering personalized skincare advice,
+                      suggesting a different product that may work better for you, or providing an exchange or store credit. We genuinely care about your skincare journey and want to ensure that every customer has the best possible experience with our brand.
+                       Thank you for choosing Heartlea skincare—your trust and satisfaction mean everything to us!</p>
+    </div>
+
+    <div class="header">
+        <h3>Ask Us Questions</h3>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email"><br>Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message"><br>Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        
+            <div id="formResponse" class="response"></div>
+        <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <!-- Left Section: About -->
+            <div class="footer-section">
+                <h3>About Heartlea</h3>
+                <p>Heartlea is Nigeria’s fast-rising online beauty retailer, offering top-quality skincare at unbeatable prices.</p>
+            </div>
+    
+            <!-- Middle Section: Information & Contact -->
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Why Choose Us</a></li>
+                    <li><a href="#">No Cosmetics & Skincare</a></li>
+                    <li><a href="#">Discount Deals</a></li>
+                    <li><a href="#">Become a Distributor</a></li>
+                    <li><a href="#">Affiliate Dashboard</a></li>
+                    <li><a href="#">Refunds & Exchanges</a></li>
+                </ul>
+            </div>
+
+  <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p> Badawa Layout, Kano, Nigeria.</p>
+                <p>07045999590</p>
+                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+
+            <div class="social-icons">
+                <i class="fa-solid fa-cart-shopping"></i> <!-- Shopping cart icon -->
+                <i class="fa-solid fa-user"></i> <!-- User icon -->
+                <i class="fa-brands fa-facebook"></i> <!-- Facebook icon -->
+                <i class="fa-brands fa-instagram"></i> <!-- Instagram icon -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Heartlea. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Initialize EmailJS
+        emailjs.init("YEwnGneclG5MNL_Id"); // Replace with your EmailJS Public Key
+    
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+    
+            emailjs.sendForm("service_pttoy6a", "template_crum7mb", this)
+                .then(response => {
+                    document.getElementById("formResponse").innerHTML = "<p style='color: green;'>Email sent successfully!</p>";
+                    document.getElementById("contactForm").reset();
+                }, error => {
+                    document.getElementById("formResponse").innerHTML = "<p style='color: red;'>Failed to send email. Try again.</p>";
+                });
+        });
+    </script>
+
+
+
+
+</body>
+</html>

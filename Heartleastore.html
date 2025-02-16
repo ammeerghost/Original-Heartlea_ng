@@ -1,0 +1,43 @@
+<!-- HTML for Dessert Store -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Store</title>
+    <link rel="stylesheet" href="Heartleastore.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script> <!-- Paystack Library -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Desserts</h1>
+        <div class="items-container">
+            <!-- Sample Dessert Items -->
+            <div class="item">
+                <img src="https://paystack.com/buy/bath-treat-hfkmjy" alt="Waffle with Berries">
+                <h3>Waffle with Berries</h3>
+                <p>$59</p>
+                <button class="add-to-cart" onclick="addToCart('Waffle with Berries', 650)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="https://paystack.com/buy/bath-treat-hfkmjy" alt="Vanilla Bean Crème Brûlée">
+                <h3>Vanilla Bean Crème Brûlée</h3>
+                <p>$NGN10</p>
+                <button class="add-to-cart" onclick="addToCart('Vanilla Bean Crème Brûlée', 10)">Add to Cart</button>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+
+        <div class="cart-container">
+            <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added dynamically here -->
+            </ul>
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <button id="checkout" onclick="payWithPaystack()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="Heartleastore.js"></script>
+</body>
+</html>
